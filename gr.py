@@ -27,10 +27,3 @@ if __name__ == "__main__":
     else:
         #print(response.status_code)
         print(response)
-
-
-
-
-
-        
-        zip -r upload.zip /home/sql/NodeGoat/app/routes/contributions.js
