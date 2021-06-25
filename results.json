@@ -4,13 +4,13 @@
       "href": "/"
     },
     "self": {
-      "href": "/scans/ce511222-93bd-467e-a042-713a195cc1e5/findings"
+      "href": "/scans/43a00783-b3f7-45c4-bc7a-857a5be3741d/findings"
     },
     "help": {
       "href": "https://help.veracode.com/reader/tS9CaFwL4_lbIEWWomsJoA/ovfZGgu96UINQxIuTqRDwg"
     }
   },
-  "scan_id": "ce511222-93bd-467e-a042-713a195cc1e5",
+  "scan_id": "43a00783-b3f7-45c4-bc7a-857a5be3741d",
   "scan_status": "SUCCESS",
   "message": "Scan successful. Results size: 82207 bytes",
   "modules": [
@@ -1077,39 +1077,6 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1036,
-      "gob": "B",
-      "severity": 3,
-      "issue_type_id": "taint",
-      "issue_type": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)",
-      "cwe_id": "80",
-      "display_text": "\u003cspan\u003eThis call to __vc_output_text() contains a cross-site scripting (XSS) flaw.  The application populates the HTTP response with untrusted input, allowing an attacker to embed malicious content, such as Javascript code, which will be executed in the context of the victim\u0027s browser.  XSS vulnerabilities are commonly exploited to steal or manipulate cookies, modify presentation of content, and compromise confidential information, with new attack vectors being discovered on a regular basis. \u003c/span\u003e \u003cspan\u003eUse contextual escaping on all untrusted data before using it to construct any portion of an HTTP response.  The escaping method should be chosen based on the specific use case of the untrusted data, otherwise it may not protect fully against the attack. For example, if the data is being written to the body of an HTML page, use HTML entity escaping; if the data is being written to an attribute, use attribute escaping; etc.  Both the OWASP Java Encoder library and the Microsoft AntiXSS library provide contextual escaping methods. For more details on contextual escaping, see https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md. In addition, as a best practice, always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/79.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://www.owasp.org/index.php/XSS\"\u003eOWASP\u003c/a\u003e \u003ca href\u003d\"https://webappsec.pbworks.com/Cross-Site-Scripting\"\u003eWASC\u003c/a\u003e \u003ca href\u003d\"https://help.veracode.com/reader/4EKhlLSMHm5jC8P8j3XccQ/IiF_rOE79ANbwnZwreSPGA\"\u003eSupported Cleansers\u003c/a\u003e\u003c/span\u003e",
-      "files": {
-        "source_file": {
-          "file": "app/views/allocations.html",
-          "line": 35,
-          "function_name": "!main",
-          "qualified_function_name": "!main",
-          "function_prototype": "void !main()",
-          "scope": "UNKNOWN"
-        }
-      },
-      "flaw_match": {
-        "procedure_hash": "125176200",
-        "prototype_hash": "211846691",
-        "flaw_hash": "3561377194",
-        "flaw_hash_count": 5,
-        "flaw_hash_ordinal": 1,
-        "cause_hash": "3693385549",
-        "cause_hash_count": 1,
-        "cause_hash_ordinal": 1,
-        "cause_hash2": "4013394447",
-        "cause_hash2_ordinal": "1"
-      },
-      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/80.html"
-    },
-    {
-      "title": "__vc_output_text",
       "issue_id": 1022,
       "gob": "B",
       "severity": 3,
@@ -1133,6 +1100,39 @@
         "flaw_hash": "3561377194",
         "flaw_hash_count": 5,
         "flaw_hash_ordinal": 2,
+        "cause_hash": "3693385549",
+        "cause_hash_count": 1,
+        "cause_hash_ordinal": 1,
+        "cause_hash2": "4013394447",
+        "cause_hash2_ordinal": "1"
+      },
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/80.html"
+    },
+    {
+      "title": "__vc_output_text",
+      "issue_id": 1036,
+      "gob": "B",
+      "severity": 3,
+      "issue_type_id": "taint",
+      "issue_type": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)",
+      "cwe_id": "80",
+      "display_text": "\u003cspan\u003eThis call to __vc_output_text() contains a cross-site scripting (XSS) flaw.  The application populates the HTTP response with untrusted input, allowing an attacker to embed malicious content, such as Javascript code, which will be executed in the context of the victim\u0027s browser.  XSS vulnerabilities are commonly exploited to steal or manipulate cookies, modify presentation of content, and compromise confidential information, with new attack vectors being discovered on a regular basis. \u003c/span\u003e \u003cspan\u003eUse contextual escaping on all untrusted data before using it to construct any portion of an HTTP response.  The escaping method should be chosen based on the specific use case of the untrusted data, otherwise it may not protect fully against the attack. For example, if the data is being written to the body of an HTML page, use HTML entity escaping; if the data is being written to an attribute, use attribute escaping; etc.  Both the OWASP Java Encoder library and the Microsoft AntiXSS library provide contextual escaping methods. For more details on contextual escaping, see https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md. In addition, as a best practice, always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/79.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://www.owasp.org/index.php/XSS\"\u003eOWASP\u003c/a\u003e \u003ca href\u003d\"https://webappsec.pbworks.com/Cross-Site-Scripting\"\u003eWASC\u003c/a\u003e \u003ca href\u003d\"https://help.veracode.com/reader/4EKhlLSMHm5jC8P8j3XccQ/IiF_rOE79ANbwnZwreSPGA\"\u003eSupported Cleansers\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "app/views/allocations.html",
+          "line": 35,
+          "function_name": "!main",
+          "qualified_function_name": "!main",
+          "function_prototype": "void !main()",
+          "scope": "UNKNOWN"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "125176200",
+        "prototype_hash": "211846691",
+        "flaw_hash": "3561377194",
+        "flaw_hash_count": 5,
+        "flaw_hash_ordinal": 1,
         "cause_hash": "3693385549",
         "cause_hash_count": 1,
         "cause_hash_ordinal": 1,
