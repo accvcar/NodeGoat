@@ -3,24 +3,16 @@
 # Check if this is the initial commit
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
-	against=HEAD
+        against=HEAD
 else
-	# Initial commit: diff against an empty tree object
-	against=$(git hash-object -t tree /dev/null)
+        # Initial commit: diff against an empty tree object
+        against=$(git hash-object -t tree /dev/null)
 fi
 
-zip -r upload.zip .
+tar -hcvzf upload.tar.gz --exclude=*node_modules* --exclude=*site-packages* --exclude *.git* .
 curl -sSO https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
 unzip pipeline-scan-LATEST.zip
-java -jar pipeline-scan.jar --file upload.zip --issue_details true --policy_name="Veracode Recommended Low"
-retVal=$?
-if [ $retVal -ne 0 ]; then
-    rm upload.zip
-	rm pipeline-scan-LATEST.zip
-	rm pipeline-scan.jar
-	exit 0
-fi
-rm upload.zip
+java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true --policy_name="Veracode Recommended Low"
+rm upload.tar.gz
 rm pipeline-scan-LATEST.zip
 rm pipeline-scan.jar
-exit $retVal
