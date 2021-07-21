@@ -27,6 +27,7 @@ function ContributionsHandler(db) {
 
     this.handleContributionsUpdate = (req, res, next) => {
 
+        
         /*jslint evil: true 
         // Insecure use of eval() to parse inputs
         const preTax = eval(req.body.preTax);
