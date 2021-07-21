@@ -13,7 +13,7 @@ pwd=$(pwd) && echo "Empacotando o diretorio: $pwd"
 tar -hcvzf upload.tar.gz --exclude=*node_modules* --exclude=*site-packages* --exclude=*.github* --exclude=*.git* --exclude=*upload.tar.gz* ./*
 echo "baixando arquivos..."
 curl -sSO https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
-unzip pipeline-scan-LATEST.zip
+unzip pipeline-scan-LATEST.zip -x README.md
 
 if [ -f "results.json" ];
 then
