@@ -25,7 +25,7 @@ then
         rm pipeline-scan.jar    
          
 else
-#       java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true --policy_name="Veracode Recommended Low"
+        #java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true --policy_name="Veracode Recommended Low"
         java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true 
         echo "results.json não existe"
         rm upload.tar.gz
