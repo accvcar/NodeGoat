@@ -4,15 +4,15 @@
       "href": "/"
     },
     "self": {
-      "href": "/scans/0392cdfb-3119-4336-8a28-2da5aabd9ac7/findings"
+      "href": "/scans/db96b2d7-3ff6-4da1-8495-b1fa0ed771ec/findings"
     },
     "help": {
       "href": "https://help.veracode.com/reader/tS9CaFwL4_lbIEWWomsJoA/ovfZGgu96UINQxIuTqRDwg"
     }
   },
-  "scan_id": "0392cdfb-3119-4336-8a28-2da5aabd9ac7",
+  "scan_id": "db96b2d7-3ff6-4da1-8495-b1fa0ed771ec",
   "scan_status": "SUCCESS",
-  "message": "Scan successful. Results size: 77110 bytes",
+  "message": "Scan successful. Results size: 81091 bytes",
   "modules": [
     "JS files within upload.tar.gz",
     "Python files within upload.tar.gz"
@@ -20,8 +20,107 @@
   "modules_count": 2,
   "findings": [
     {
+      "title": "eval",
+      "issue_id": 1010,
+      "gob": "B",
+      "severity": 5,
+      "issue_type_id": "taint",
+      "issue_type": "Improper Neutralization of Directives in Dynamically Evaluated Code (\u0027Eval Injection\u0027)",
+      "cwe_id": "95",
+      "display_text": "\u003cspan\u003eThis call to eval() contains untrusted input or potentially untrusted data.  If this input could be modified by an attacker, arbitrary JS code could be executed. \u003c/span\u003e \u003cspan\u003eValidate all untrusted and untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.  In general, avoid executing code derived from untrusted input.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/95.html\"\u003eCWE\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "app/routes/contributions.js",
+          "line": 32,
+          "function_name": "lambda_5",
+          "qualified_function_name": "lambda_5",
+          "function_prototype": "lambda_5(: any,  : any,  : any,  : any, ...) : any",
+          "scope": "UNKNOWN"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "3000196696",
+        "prototype_hash": "229243849",
+        "flaw_hash": "3341717358",
+        "flaw_hash_count": 3,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "3693385549",
+        "cause_hash_count": 1,
+        "cause_hash_ordinal": 1,
+        "cause_hash2": "4013394447",
+        "cause_hash2_ordinal": "1"
+      },
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/95.html"
+    },
+    {
+      "title": "eval",
+      "issue_id": 1011,
+      "gob": "B",
+      "severity": 5,
+      "issue_type_id": "taint",
+      "issue_type": "Improper Neutralization of Directives in Dynamically Evaluated Code (\u0027Eval Injection\u0027)",
+      "cwe_id": "95",
+      "display_text": "\u003cspan\u003eThis call to eval() contains untrusted input or potentially untrusted data.  If this input could be modified by an attacker, arbitrary JS code could be executed. \u003c/span\u003e \u003cspan\u003eValidate all untrusted and untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.  In general, avoid executing code derived from untrusted input.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/95.html\"\u003eCWE\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "app/routes/contributions.js",
+          "line": 33,
+          "function_name": "lambda_5",
+          "qualified_function_name": "lambda_5",
+          "function_prototype": "lambda_5(: any,  : any,  : any,  : any, ...) : any",
+          "scope": "UNKNOWN"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "3000196696",
+        "prototype_hash": "229243849",
+        "flaw_hash": "3341717358",
+        "flaw_hash_count": 3,
+        "flaw_hash_ordinal": 2,
+        "cause_hash": "3693385549",
+        "cause_hash_count": 1,
+        "cause_hash_ordinal": 1,
+        "cause_hash2": "4013394447",
+        "cause_hash2_ordinal": "1"
+      },
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/95.html"
+    },
+    {
+      "title": "eval",
+      "issue_id": 1012,
+      "gob": "B",
+      "severity": 5,
+      "issue_type_id": "taint",
+      "issue_type": "Improper Neutralization of Directives in Dynamically Evaluated Code (\u0027Eval Injection\u0027)",
+      "cwe_id": "95",
+      "display_text": "\u003cspan\u003eThis call to eval() contains untrusted input or potentially untrusted data.  If this input could be modified by an attacker, arbitrary JS code could be executed. \u003c/span\u003e \u003cspan\u003eValidate all untrusted and untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.  In general, avoid executing code derived from untrusted input.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/95.html\"\u003eCWE\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "app/routes/contributions.js",
+          "line": 34,
+          "function_name": "lambda_5",
+          "qualified_function_name": "lambda_5",
+          "function_prototype": "lambda_5(: any,  : any,  : any,  : any, ...) : any",
+          "scope": "UNKNOWN"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "3000196696",
+        "prototype_hash": "229243849",
+        "flaw_hash": "3341717358",
+        "flaw_hash_count": 3,
+        "flaw_hash_ordinal": 3,
+        "cause_hash": "3693385549",
+        "cause_hash_count": 1,
+        "cause_hash_ordinal": 1,
+        "cause_hash2": "4013394447",
+        "cause_hash2_ordinal": "1"
+      },
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/95.html"
+    },
+    {
       "title": "update",
-      "issue_id": 1016,
+      "issue_id": 1019,
       "gob": "B",
       "severity": 4,
       "issue_type_id": "crypto",
@@ -54,7 +153,7 @@
     },
     {
       "title": "findOne",
-      "issue_id": 1014,
+      "issue_id": 1017,
       "gob": "B",
       "severity": 4,
       "issue_type_id": "crypto",
@@ -87,7 +186,7 @@
     },
     {
       "title": "update",
-      "issue_id": 1015,
+      "issue_id": 1018,
       "gob": "B",
       "severity": 4,
       "issue_type_id": "crypto",
@@ -219,7 +318,7 @@
     },
     {
       "title": "express",
-      "issue_id": 1013,
+      "issue_id": 1016,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "crypto",
@@ -252,7 +351,7 @@
     },
     {
       "title": "swig.setDefaults",
-      "issue_id": 1038,
+      "issue_id": 1041,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "crypto",
@@ -483,7 +582,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1025,
+      "issue_id": 1028,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -516,7 +615,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1030,
+      "issue_id": 1033,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -549,7 +648,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1021,
+      "issue_id": 1024,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -582,7 +681,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1031,
+      "issue_id": 1034,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -615,7 +714,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1035,
+      "issue_id": 1038,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -648,7 +747,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1034,
+      "issue_id": 1037,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -681,7 +780,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1028,
+      "issue_id": 1031,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -714,7 +813,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1032,
+      "issue_id": 1035,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -747,7 +846,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1024,
+      "issue_id": 1027,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -780,7 +879,7 @@
     },
     {
       "title": "__vc_output_raw",
-      "issue_id": 1036,
+      "issue_id": 1039,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -813,7 +912,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1023,
+      "issue_id": 1026,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -846,7 +945,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1027,
+      "issue_id": 1030,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -879,7 +978,7 @@
     },
     {
       "title": "__vc_output_raw",
-      "issue_id": 1037,
+      "issue_id": 1040,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -912,7 +1011,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1020,
+      "issue_id": 1023,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -945,7 +1044,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1029,
+      "issue_id": 1032,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -978,40 +1077,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1033,
-      "gob": "B",
-      "severity": 3,
-      "issue_type_id": "taint",
-      "issue_type": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)",
-      "cwe_id": "80",
-      "display_text": "\u003cspan\u003eThis call to __vc_output_text() contains a cross-site scripting (XSS) flaw.  The application populates the HTTP response with untrusted input, allowing an attacker to embed malicious content, such as Javascript code, which will be executed in the context of the victim\u0027s browser.  XSS vulnerabilities are commonly exploited to steal or manipulate cookies, modify presentation of content, and compromise confidential information, with new attack vectors being discovered on a regular basis. \u003c/span\u003e \u003cspan\u003eUse contextual escaping on all untrusted data before using it to construct any portion of an HTTP response.  The escaping method should be chosen based on the specific use case of the untrusted data, otherwise it may not protect fully against the attack. For example, if the data is being written to the body of an HTML page, use HTML entity escaping; if the data is being written to an attribute, use attribute escaping; etc.  Both the OWASP Java Encoder library and the Microsoft AntiXSS library provide contextual escaping methods. For more details on contextual escaping, see https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md. In addition, as a best practice, always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/79.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://www.owasp.org/index.php/XSS\"\u003eOWASP\u003c/a\u003e \u003ca href\u003d\"https://webappsec.pbworks.com/Cross-Site-Scripting\"\u003eWASC\u003c/a\u003e \u003ca href\u003d\"https://help.veracode.com/reader/4EKhlLSMHm5jC8P8j3XccQ/IiF_rOE79ANbwnZwreSPGA\"\u003eSupported Cleansers\u003c/a\u003e\u003c/span\u003e",
-      "files": {
-        "source_file": {
-          "file": "app/views/allocations.html",
-          "line": 35,
-          "function_name": "!main",
-          "qualified_function_name": "!main",
-          "function_prototype": "!main() : void",
-          "scope": "UNKNOWN"
-        }
-      },
-      "flaw_match": {
-        "procedure_hash": "125176200",
-        "prototype_hash": "211846691",
-        "flaw_hash": "3561377194",
-        "flaw_hash_count": 5,
-        "flaw_hash_ordinal": 1,
-        "cause_hash": "3693385549",
-        "cause_hash_count": 1,
-        "cause_hash_ordinal": 1,
-        "cause_hash2": "4013394447",
-        "cause_hash2_ordinal": "1"
-      },
-      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/80.html"
-    },
-    {
-      "title": "__vc_output_text",
-      "issue_id": 1019,
+      "issue_id": 1022,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1044,7 +1110,40 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1022,
+      "issue_id": 1036,
+      "gob": "B",
+      "severity": 3,
+      "issue_type_id": "taint",
+      "issue_type": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)",
+      "cwe_id": "80",
+      "display_text": "\u003cspan\u003eThis call to __vc_output_text() contains a cross-site scripting (XSS) flaw.  The application populates the HTTP response with untrusted input, allowing an attacker to embed malicious content, such as Javascript code, which will be executed in the context of the victim\u0027s browser.  XSS vulnerabilities are commonly exploited to steal or manipulate cookies, modify presentation of content, and compromise confidential information, with new attack vectors being discovered on a regular basis. \u003c/span\u003e \u003cspan\u003eUse contextual escaping on all untrusted data before using it to construct any portion of an HTTP response.  The escaping method should be chosen based on the specific use case of the untrusted data, otherwise it may not protect fully against the attack. For example, if the data is being written to the body of an HTML page, use HTML entity escaping; if the data is being written to an attribute, use attribute escaping; etc.  Both the OWASP Java Encoder library and the Microsoft AntiXSS library provide contextual escaping methods. For more details on contextual escaping, see https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md. In addition, as a best practice, always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/79.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://www.owasp.org/index.php/XSS\"\u003eOWASP\u003c/a\u003e \u003ca href\u003d\"https://webappsec.pbworks.com/Cross-Site-Scripting\"\u003eWASC\u003c/a\u003e \u003ca href\u003d\"https://help.veracode.com/reader/4EKhlLSMHm5jC8P8j3XccQ/IiF_rOE79ANbwnZwreSPGA\"\u003eSupported Cleansers\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "app/views/allocations.html",
+          "line": 35,
+          "function_name": "!main",
+          "qualified_function_name": "!main",
+          "function_prototype": "!main() : void",
+          "scope": "UNKNOWN"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "125176200",
+        "prototype_hash": "211846691",
+        "flaw_hash": "3561377194",
+        "flaw_hash_count": 5,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "3693385549",
+        "cause_hash_count": 1,
+        "cause_hash_ordinal": 1,
+        "cause_hash2": "4013394447",
+        "cause_hash2_ordinal": "1"
+      },
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/80.html"
+    },
+    {
+      "title": "__vc_output_text",
+      "issue_id": 1025,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1077,7 +1176,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1018,
+      "issue_id": 1021,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1110,7 +1209,7 @@
     },
     {
       "title": "__vc_output_text",
-      "issue_id": 1026,
+      "issue_id": 1029,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1176,7 +1275,7 @@
     },
     {
       "title": "http.get",
-      "issue_id": 1010,
+      "issue_id": 1013,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1209,7 +1308,7 @@
     },
     {
       "title": "express.Response.redirect",
-      "issue_id": 1011,
+      "issue_id": 1014,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "taint",
@@ -1242,7 +1341,7 @@
     },
     {
       "title": "update",
-      "issue_id": 1017,
+      "issue_id": 1020,
       "gob": "B",
       "severity": 3,
       "issue_type_id": "crypto",
@@ -1275,7 +1374,7 @@
     },
     {
       "title": "!func",
-      "issue_id": 1012,
+      "issue_id": 1015,
       "gob": "B",
       "severity": 2,
       "issue_type_id": "crypto",
