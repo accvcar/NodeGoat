@@ -15,6 +15,6 @@ echo "baixando arquivos..."
 wget -q -O veracode-wrapper.jar https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/21.6.8.0/vosp-api-wrappers-java-21.6.8.0.jar
 echo "Iniciando análise..."
 hashcommit=$(git rev-parse --verify HEAD)
-java -jar veracode-wrapper.jar -action UploadAndScan -appname "NodeGoat-Azure" -createprofile false -autoscan true -filepath upload.tar.gz -version "Scan commit $hashcommit with git Hooks" -scantimeout 15
+java -jar veracode-wrapper.jar -action UploadAndScan -appname "NodeGoat-Azure" -createprofile false -autoscan true -filepath upload.tar.gz -version "Scan commit $hashcommit with git Hooks" -scantimeout 15 - createsandbox true -sandboxname "Nodegoat"
 rm upload.tar.gz
 rm veracode-wrapper.jar
