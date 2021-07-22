@@ -12,24 +12,9 @@ fi
 pwd=$(pwd) && echo "Empacotando o diretorio: $pwd"
 tar -hcvzf upload.tar.gz --exclude=*node_modules* --exclude=*site-packages* --exclude=*.github* --exclude=*.git* --exclude=*upload.tar.gz* ./*
 echo "baixando arquivos..."
-curl -sSO https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
-unzip pipeline-scan-LATEST.zip -x README.md
-
-if [ -f "results.json" ];
-then
-        java -jar /home/sql/pipeline-scan.jar --file upload.tar.gz --issue_detail true --baseline_file results.json
-        #java -jar /home/sql/pipeline-scan.jar --file upload.tar.gz --issue_detail true --policy_name="Veracode Recommended Low" --baseline_file results.json
-        echo "results.json existe"
-        rm upload.tar.gz
-        rm pipeline-scan-LATEST.zip
-        rm pipeline-scan.jar    
-         
-else
-        #java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true --policy_name="Veracode Recommended Low"
-        java -jar pipeline-scan.jar --file upload.tar.gz --issue_details true 
-        echo "results.json não existe"
-        rm upload.tar.gz
-        rm pipeline-scan-LATEST.zip
-        rm pipeline-scan.jar
-
-fi
+wget -q -O veracode-wrapper.jar https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/21.6.8.0/vosp-api-wrappers-java-21.6.8.0.jar
+echo "Iniciando análise..."
+hashcommit=$(git rev-parse --verify HEAD)
+java -jar veracode-wrapper.jar -action UploadAndScan -appname "NodeGoat-Azure" -createprofile false -autoscan true -filepath upload.tar.gz -version "Scan commit $hashcommit with git Hooks" -scantimeout 15
+rm upload.tar.gz
+rm veracode-wrapper.jar
